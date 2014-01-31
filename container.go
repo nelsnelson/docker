@@ -150,6 +150,7 @@ type HostConfig struct {
 	LxcConf         []KeyValuePair
 	Privileged      bool
 	PortBindings    map[Port][]PortBinding
+	Rackspace       bool
 	Links           []string
 	PublishAllPorts bool
 }

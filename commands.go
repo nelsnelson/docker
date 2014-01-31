@@ -1773,6 +1773,7 @@ func parseRun(cmd *flag.FlagSet, args []string, sysInfo *sysinfo.SysInfo) (*Conf
 		flNetwork         = cmd.Bool([]string{"n", "-networking"}, true, "Enable networking for this container")
 		flPrivileged      = cmd.Bool([]string{"#privileged", "-privileged"}, false, "Give extended privileges to this container")
 		flPublishAll      = cmd.Bool([]string{"P", "-publish-all"}, false, "Publish all exposed ports to the host interfaces")
+		flRackspace       = cmd.Bool([]string{"#rackspace", "-rackspace"}, false, "Use Rackspace OpenStack")
 		flStdin           = cmd.Bool([]string{"i", "-interactive"}, false, "Keep stdin open even if not attached")
 		flTty             = cmd.Bool([]string{"t", "-tty"}, false, "Allocate a pseudo-tty")
 		flContainerIDFile = cmd.String([]string{"#cidfile", "-cidfile"}, "", "Write the container ID to the file")
@@ -1932,6 +1933,7 @@ func parseRun(cmd *flag.FlagSet, args []string, sysInfo *sysinfo.SysInfo) (*Conf
 		LxcConf:         lxcConf,
 		Privileged:      *flPrivileged,
 		PortBindings:    portBindings,
+		Rackspace:       *flRackspace,
 		Links:           flLinks.GetAll(),
 		PublishAllPorts: *flPublishAll,
 	}
