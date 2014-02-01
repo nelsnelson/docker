@@ -1840,6 +1840,11 @@ func parseRun(cmd *flag.FlagSet, args []string, sysInfo *sysinfo.SysInfo) (*Conf
 		flMemory = parsedMemory
 	}
 
+	var flServiceProvider string
+	if *flRackspace {
+		flServiceProvider = "rackspace"
+	}
+
 	var binds []string
 	// add any bind targets to the list of container volumes
 	for bind := range flVolumes.GetMap() {
@@ -1933,7 +1938,7 @@ func parseRun(cmd *flag.FlagSet, args []string, sysInfo *sysinfo.SysInfo) (*Conf
 		LxcConf:         lxcConf,
 		Privileged:      *flPrivileged,
 		PortBindings:    portBindings,
-		Rackspace:       *flRackspace,
+		ServiceProvider: *flServiceProvider,
 		Links:           flLinks.GetAll(),
 		PublishAllPorts: *flPublishAll,
 	}
