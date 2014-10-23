@@ -49,6 +49,12 @@ clone git github.com/tchap/go-patricia v1.0.1
 
 clone git github.com/digitalocean/godo v0.4.0
 
+clone git github.com/rackspace/gophercloud a80ea95065ba07f59674f6189efc1de4d3218e32
+
+clone git github.com/mitchellh/mapstructure 740c764bc6149d3f1806231418adb9f52c11bcbf
+
+clone git github.com/racker/perigee 0c00cb0a026b71034ebc8205263c77dad3577db5
+
 clone git github.com/google/go-querystring 30f7a39f4a218feb5325f3aebc60c32a572a8274
 
 clone git github.com/tent/http-link-go ac974c61c2f990f4115b119354b5e0b47550e888

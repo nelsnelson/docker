@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Run the acceptance tests.
+
+exec go test -v -p=1 -tags 'acceptance fixtures' ./acceptance/... $@
